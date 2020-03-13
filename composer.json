@@ -1,0 +1,30 @@
+{
+    "name": "gbrabyn/dynamic-forms",
+    "description": "Form building and handling package",
+    "keywords": ["form", "composer", "package"],
+    "version": "0.1.0",
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "GBrabyn",
+            "email": "gbrabyn@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "laminas/laminas-validator": "dev-master",
+        "laminas/laminas-inputfilter": "~2.7",
+        "laminas/laminas-escaper": "~2.5",
+        "laminas/laminas-math": "~3.0",
+        "laminas/laminas-session": "~2.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "GBrabyn\\DynamicForms\\": "src/"
+        }
+    }
+}

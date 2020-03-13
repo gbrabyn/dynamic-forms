@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /var/www/src/Element</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/nv.d3.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.min.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">/var/www/src</a></li>
+        <li><a href="index.html">Element</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="ListAbstract.php.html#24"><abbr title="ListAbstract::getOptionValues">getOptionValues</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Attributes.php.html#99"><abbr title="Attributes::escapeAttr">escapeAttr</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Attributes.php.html#114"><abbr title="Attributes::has">has</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Attributes.php.html#129"><abbr title="Attributes::hasValue">hasValue</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Attributes.php.html#144"><abbr title="Attributes::get">get</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="ElementAbstract.php.html#70"><abbr title="ElementAbstract::getAttributesString">getAttributesString</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="ElementAbstract.php.html#119"><abbr title="ElementAbstract::__toString">__toString</abbr></a></td><td class="text-right">85%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Attributes.php.html#114"><abbr title="Attributes::has">has</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Attributes.php.html#129"><abbr title="Attributes::hasValue">hasValue</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="ElementAbstract.php.html#119"><abbr title="ElementAbstract::__toString">__toString</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Attributes.php.html#99"><abbr title="Attributes::escapeAttr">escapeAttr</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Attributes.php.html#144"><abbr title="Attributes::get">get</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="ElementAbstract.php.html#70"><abbr title="ElementAbstract::getAttributesString">getAttributesString</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 4.0.8</a> using <a href="https://secure.php.net/" target="_top">PHP 7.1.8</a> with <a href="https://xdebug.org/">Xdebug 2.9.2</a> and <a href="https://phpunit.de/">PHPUnit 5.7.27</a> at Fri Mar 13 3:28:26 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/holder.min.js" type="text/javascript"></script>
+  <script src="../js/d3.min.js" type="text/javascript"></script>
+  <script src="../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,3,15], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,5,0,1,1,75], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[90,32,"<a href=\"Attributes.php.html#11\">Attributes<\/a>"],[100,2,"<a href=\"Callback.php.html#12\">Callback<\/a>"],[93.75,19,"<a href=\"ElementAbstract.php.html#14\">ElementAbstract<\/a>"],[100,3,"<a href=\"LaminasEscaperWrapper.php.html#10\">LaminasEscaperWrapper<\/a>"],[95.83333333333334,12,"<a href=\"ListAbstract.php.html#12\">ListAbstract<\/a>"],[100,6,"<a href=\"Option.php.html#9\">Option<\/a>"],[100,16,"<a href=\"Options.php.html#9\">Options<\/a>"],[100,14,"<a href=\"html5\/Checkbox.php.html#12\">Checkbox<\/a>"],[100,3,"<a href=\"html5\/CheckboxList.php.html#12\">CheckboxList<\/a>"],[100,7,"<a href=\"html5\/DataList.php.html#12\">DataList<\/a>"],[100,1,"<a href=\"html5\/File.php.html#12\">File<\/a>"],[100,11,"<a href=\"html5\/Hidden.php.html#12\">Hidden<\/a>"],[100,2,"<a href=\"html5\/Input.php.html#12\">Input<\/a>"],[100,4,"<a href=\"html5\/InputNumber.php.html#12\">InputNumber<\/a>"],[100,13,"<a href=\"html5\/Radio.php.html#12\">Radio<\/a>"],[100,3,"<a href=\"html5\/RadioList.php.html#12\">RadioList<\/a>"],[100,14,"<a href=\"html5\/Select.php.html#14\">Select<\/a>"],[100,1,"<a href=\"html5\/Textarea.php.html#11\">Textarea<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Attributes.php.html#39\">Attributes::__construct<\/a>"],[100,4,"<a href=\"Attributes.php.html#48\">Attributes::add<\/a>"],[100,3,"<a href=\"Attributes.php.html#64\">Attributes::addToClass<\/a>"],[100,3,"<a href=\"Attributes.php.html#78\">Attributes::addToAttributesSingle<\/a>"],[100,1,"<a href=\"Attributes.php.html#89\">Attributes::setEscaper<\/a>"],[66.66666666666666,2,"<a href=\"Attributes.php.html#99\">Attributes::escapeAttr<\/a>"],[66.66666666666666,3,"<a href=\"Attributes.php.html#114\">Attributes::has<\/a>"],[66.66666666666666,3,"<a href=\"Attributes.php.html#129\">Attributes::hasValue<\/a>"],[66.66666666666666,2,"<a href=\"Attributes.php.html#144\">Attributes::get<\/a>"],[100,3,"<a href=\"Attributes.php.html#154\">Attributes::remove<\/a>"],[92.3076923076923,7,"<a href=\"Attributes.php.html#170\">Attributes::getAsString<\/a>"],[100,1,"<a href=\"Callback.php.html#25\">Callback::__construct<\/a>"],[100,1,"<a href=\"Callback.php.html#35\">Callback::getWithoutErrorMessage<\/a>"],[100,1,"<a href=\"ElementAbstract.php.html#38\">ElementAbstract::__construct<\/a>"],[100,1,"<a href=\"ElementAbstract.php.html#44\">ElementAbstract::setName<\/a>"],[100,1,"<a href=\"ElementAbstract.php.html#50\">ElementAbstract::setField<\/a>"],[100,1,"<a href=\"ElementAbstract.php.html#56\">ElementAbstract::setErrorDecorator<\/a>"],[100,1,"<a href=\"ElementAbstract.php.html#62\">ElementAbstract::setAttributes<\/a>"],[66.66666666666666,2,"<a href=\"ElementAbstract.php.html#70\">ElementAbstract::getAttributesString<\/a>"],[100,1,"<a href=\"ElementAbstract.php.html#80\">ElementAbstract::getAttributes<\/a>"],[100,1,"<a href=\"ElementAbstract.php.html#86\">ElementAbstract::getEscaper<\/a>"],[100,2,"<a href=\"ElementAbstract.php.html#92\">ElementAbstract::escapeAttr<\/a>"],[100,2,"<a href=\"ElementAbstract.php.html#102\">ElementAbstract::escapeHtml<\/a>"],[100,1,"<a href=\"ElementAbstract.php.html#116\">ElementAbstract::getWithoutErrorMessage<\/a>"],[85.71428571428571,3,"<a href=\"ElementAbstract.php.html#119\">ElementAbstract::__toString<\/a>"],[100,2,"<a href=\"ElementAbstract.php.html#136\">ElementAbstract::__clone<\/a>"],[100,1,"<a href=\"LaminasEscaperWrapper.php.html#16\">LaminasEscaperWrapper::__construct<\/a>"],[100,1,"<a href=\"LaminasEscaperWrapper.php.html#27\">LaminasEscaperWrapper::escapeAttr<\/a>"],[100,1,"<a href=\"LaminasEscaperWrapper.php.html#37\">LaminasEscaperWrapper::escapeHtml<\/a>"],[100,1,"<a href=\"ListAbstract.php.html#18\">ListAbstract::__construct<\/a>"],[0,1,"<a href=\"ListAbstract.php.html#24\">ListAbstract::getOptionValues<\/a>"],[100,6,"<a href=\"ListAbstract.php.html#29\">ListAbstract::transferItemAttributes<\/a>"],[100,1,"<a href=\"ListAbstract.php.html#58\">ListAbstract::optionItems<\/a>"],[100,2,"<a href=\"ListAbstract.php.html#64\">ListAbstract::getWithoutErrorMessage<\/a>"],[100,1,"<a href=\"ListAbstract.php.html#72\">ListAbstract::__clone<\/a>"],[100,1,"<a href=\"Option.php.html#30\">Option::__construct<\/a>"],[100,1,"<a href=\"Option.php.html#42\">Option::value<\/a>"],[100,1,"<a href=\"Option.php.html#51\">Option::label<\/a>"],[100,1,"<a href=\"Option.php.html#60\">Option::group<\/a>"],[100,1,"<a href=\"Option.php.html#69\">Option::attributes<\/a>"],[100,1,"<a href=\"Option.php.html#75\">Option::__clone<\/a>"],[100,2,"<a href=\"Options.php.html#21\">Options::__construct<\/a>"],[100,1,"<a href=\"Options.php.html#32\">Options::getIterator<\/a>"],[100,1,"<a href=\"Options.php.html#41\">Options::getOptions<\/a>"],[100,2,"<a href=\"Options.php.html#50\">Options::getValues<\/a>"],[100,1,"<a href=\"Options.php.html#69\">Options::makeOption<\/a>"],[100,1,"<a href=\"Options.php.html#84\">Options::add<\/a>"],[100,1,"<a href=\"Options.php.html#99\">Options::prepend<\/a>"],[100,3,"<a href=\"Options.php.html#114\">Options::setFromMultiArray<\/a>"],[100,2,"<a href=\"Options.php.html#131\">Options::setFromValuesOnly<\/a>"],[100,2,"<a href=\"Options.php.html#141\">Options::__clone<\/a>"],[100,1,"<a href=\"html5\/Checkbox.php.html#18\">Checkbox::__construct<\/a>"],[100,6,"<a href=\"html5\/Checkbox.php.html#28\">Checkbox::getWithoutErrorMessage<\/a>"],[100,4,"<a href=\"html5\/Checkbox.php.html#57\">Checkbox::checkValueNotDuplicated<\/a>"],[100,3,"<a href=\"html5\/Checkbox.php.html#68\">Checkbox::getValueFromAttributes<\/a>"],[100,3,"<a href=\"html5\/CheckboxList.php.html#14\">CheckboxList::optionItems<\/a>"],[100,1,"<a href=\"html5\/DataList.php.html#17\">DataList::__construct<\/a>"],[100,2,"<a href=\"html5\/DataList.php.html#23\">DataList::optionsElements<\/a>"],[100,1,"<a href=\"html5\/DataList.php.html#45\">DataList::getWithoutErrorMessage<\/a>"],[100,2,"<a href=\"html5\/DataList.php.html#50\">DataList::__toString<\/a>"],[100,1,"<a href=\"html5\/DataList.php.html#59\">DataList::getOptionValues<\/a>"],[100,1,"<a href=\"html5\/File.php.html#19\">File::getWithoutErrorMessage<\/a>"],[100,1,"<a href=\"html5\/Hidden.php.html#25\">Hidden::__construct<\/a>"],[100,3,"<a href=\"html5\/Hidden.php.html#35\">Hidden::getWithoutErrorMessage<\/a>"],[100,4,"<a href=\"html5\/Hidden.php.html#59\">Hidden::checkValueNotDuplicated<\/a>"],[100,3,"<a href=\"html5\/Hidden.php.html#70\">Hidden::getValueFromAttributes<\/a>"],[100,1,"<a href=\"html5\/Input.php.html#25\">Input::__construct<\/a>"],[100,1,"<a href=\"html5\/Input.php.html#35\">Input::getWithoutErrorMessage<\/a>"],[100,1,"<a href=\"html5\/InputNumber.php.html#16\">InputNumber::__construct<\/a>"],[100,2,"<a href=\"html5\/InputNumber.php.html#23\">InputNumber::getFormattedValue<\/a>"],[100,1,"<a href=\"html5\/InputNumber.php.html#38\">InputNumber::getWithoutErrorMessage<\/a>"],[100,1,"<a href=\"html5\/Radio.php.html#18\">Radio::__construct<\/a>"],[100,5,"<a href=\"html5\/Radio.php.html#28\">Radio::getWithoutErrorMessage<\/a>"],[100,4,"<a href=\"html5\/Radio.php.html#57\">Radio::checkValueNotDuplicated<\/a>"],[100,3,"<a href=\"html5\/Radio.php.html#68\">Radio::getValueFromAttributes<\/a>"],[100,3,"<a href=\"html5\/RadioList.php.html#14\">RadioList::optionItems<\/a>"],[100,1,"<a href=\"html5\/Select.php.html#26\">Select::__construct<\/a>"],[100,4,"<a href=\"html5\/Select.php.html#33\">Select::optionsElements<\/a>"],[100,6,"<a href=\"html5\/Select.php.html#64\">Select::groupTag<\/a>"],[100,1,"<a href=\"html5\/Select.php.html#89\">Select::getWithoutErrorMessage<\/a>"],[100,1,"<a href=\"html5\/Select.php.html#95\">Select::getOptionValues<\/a>"],[100,1,"<a href=\"html5\/Select.php.html#101\">Select::__clone<\/a>"],[100,1,"<a href=\"html5\/Textarea.php.html#17\">Textarea::getWithoutErrorMessage<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
