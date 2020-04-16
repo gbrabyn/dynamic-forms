@@ -655,37 +655,6 @@ abstract class FormAbstract implements \SplSubject
         
         return (string)$this->formErrorsDecorator;
     }
-    
-    /**
-     * @deprecated - @see self::seqKeyFields()
-     *
-     * Shortcut to apply transformers and validators to a group of elements comprising a sequential list
-     * 
-     * @param string $parentKey - the parent of 'aa.bb.0' is 'aa.bb'. $parentKey must represent a sequential array.
-     * @param array $formValues - values populating the form
-     * @param Transform\TransformAbstract[] $transformers
-     * @param FieldValidator\FieldValidatorAbstract[] $validators
-     */
-    public function applyToChildren($parentKey, array $formValues, array $transformers, array $validators)
-    {
-        $this->field($parentKey)->setValue([], false); // empty array is expected if no populated values are set
-        $parentFields = (array)$this->getValueFromArray($parentKey, $formValues);
-
-        if(\is_array($parentFields) === false){
-            return;
-        }
-
-        $x = 0;
-        foreach(\array_keys($parentFields) AS $key){
-            if($key !== $x++){
-                continue;   // for security reasons keeping getDefinedValues() with predictable values
-            }
-
-            $this->field($parentKey.'.'.$key)
-                    ->addTransformers($transformers)
-                    ->addValidators($validators);
-        }
-    }
 
     /**
      * Iterate over a group of fields with related sequential fieldKeys
