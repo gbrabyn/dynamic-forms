@@ -112,4 +112,27 @@ class FieldTest extends PHPUnit_Framework_TestCase
         
     }
 
+
+    public function testEnsureArray()
+    {
+        $field1 = new GBrabyn\DynamicForms\Field();
+        $field1->ensureArray();
+        $this->assertEquals([], $field1->getValue());
+
+        $field2 = new GBrabyn\DynamicForms\Field();
+        $field2->ensureArray();
+        $field2->setValue('bbbbbb', true);
+        $this->assertEquals([], $field2->getValue());
+
+        $field3 = new GBrabyn\DynamicForms\Field();
+        $field3->ensureArray();
+        $field3->setValue(['b'=>'c'], true);
+        $this->assertEquals(['b'=>'c'], $field3->getValue());
+
+        $field3 = new GBrabyn\DynamicForms\Field();
+        $field3->ensureArray();
+        $field3->setValue(['a', 'b', 'c'], true);
+        $this->assertEquals(['a', 'b', 'c'], $field3->getValue());
+    }
+
 }

@@ -1,6 +1,8 @@
 <?php
 namespace GBrabyn\DynamicForms;
 
+use GBrabyn\DynamicForms\Transform\EnsureArray;
+
 /**
  * Behaviour and data of a form field
  *
@@ -210,6 +212,19 @@ class Field implements \SplSubject
         }
         
         return false;
+    }
+
+    /**
+     * Make sure the field has an array type value
+     * @return $this
+     */
+    public function ensureArray()
+    {
+        $this
+            ->setValue([], false)
+            ->_addTransformer(new EnsureArray());
+
+        return $this;
     }
 
 }
