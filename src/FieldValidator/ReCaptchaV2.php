@@ -22,6 +22,11 @@ class ReCaptchaV2 extends FieldValidatorAbstract
      * @var string
      */
     private $secret;
+
+    /**
+     * @var bool
+     */
+    private $sendUsersIpAddress = false;
     
     
     private $apiUrl = 'https://www.google.com/recaptcha/api/siteverify';
@@ -31,10 +36,18 @@ class ReCaptchaV2 extends FieldValidatorAbstract
      * @param string $secret
      * @param Error $error
      */
-    public function __construct($secret, Error $error=null)
+    public function __construct($secret, Error $error=null, array $options=[])
     {
         $this->secret = $secret;
         $this->error = $error;
+        $this->setOptions($options);
+    }
+
+    private function setOptions(array $options)
+    {
+        if(\array_key_exists('sendUsersIpAddress', $options)){
+            $this->sendUsersIpAddress = (bool)$options['sendUsersIpAddress'];
+        }
     }
     
     /**
@@ -52,9 +65,13 @@ class ReCaptchaV2 extends FieldValidatorAbstract
      */
     public function isValid()
     {
-        $reponse = $this->getApiResponse($this->value);
+        $response = $this->getApiResponse($this->value);
+
+        if(! empty($response['error-codes'])){
+            throw new \Error('Error encountered in API response: '.print_r($response['error-codes'], true));
+        }
         
-        return ($reponse->success == true);
+        return ($response->success == true);
     }
     
     /**
@@ -64,16 +81,35 @@ class ReCaptchaV2 extends FieldValidatorAbstract
      */
     private function getApiResponse($responseFromForm)
     {
-	$options = [
-            'http' => [
-                'method' => 'POST',
-                'content' => \http_build_query(['secret'=>$this->secret, 'response'=>$responseFromForm])
-            ]
-	];
-	$context  = \stream_context_create($options);
-	$verify = \file_get_contents($this->apiUrl, false, $context);
-        
-	return \json_decode($verify);
+        $query = ['secret'=>$this->secret, 'response'=>$responseFromForm];
+
+        if($this->sendUsersIpAddress === true){
+            $query['remoteip'] = $this->getUserIpAddr();
+        }
+
+        $options = [
+                'http' => [
+                    'method' => 'POST',
+                    'content' => \http_build_query($query)
+                ]
+        ];
+        $context  = \stream_context_create($options);
+        $verify = \file_get_contents($this->apiUrl, false, $context);
+
+        return \json_decode($verify);
+    }
+
+    private function getUserIpAddr()
+    {
+        if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+            //ip from share internet
+            return $_SERVER['HTTP_CLIENT_IP'];
+        }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+            //ip pass from proxy
+            return $_SERVER['HTTP_X_FORWARDED_FOR'];
+        }
+
+        return $_SERVER['REMOTE_ADDR'];
     }
     
     /**
