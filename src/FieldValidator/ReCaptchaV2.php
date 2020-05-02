@@ -98,7 +98,7 @@ class ReCaptchaV2 extends FieldValidatorAbstract
                 'http' => [
                     'method' => 'POST',
                     'header' => \implode("\r\n", $header),
-                    'content' => \http_build_query($query),
+                    'content' => $query,
                 ]
         ];
 
