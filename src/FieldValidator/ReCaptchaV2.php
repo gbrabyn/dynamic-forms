@@ -67,8 +67,8 @@ class ReCaptchaV2 extends FieldValidatorAbstract
     {
         $response = $this->getApiResponse($this->value);
 
-        if(! empty($response['error-codes'])){
-            throw new \Error('Error encountered in API response: '.print_r($response['error-codes'], true));
+        if(! empty($response->error-codes)){
+            throw new \Error('Error encountered in API response: '.print_r($response->error-codes, true));
         }
         
         return ($response->success == true);
@@ -105,7 +105,7 @@ class ReCaptchaV2 extends FieldValidatorAbstract
         $context  = \stream_context_create($options);
         $verify = \file_get_contents($this->apiUrl, false, $context);
 
-        return \json_decode($verify, true);
+        return \json_decode($verify);
     }
 
     private function getUserIpAddr()
