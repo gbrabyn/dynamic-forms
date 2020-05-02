@@ -105,7 +105,7 @@ class ReCaptchaV2 extends FieldValidatorAbstract
         $context  = \stream_context_create($options);
         $verify = \file_get_contents($this->apiUrl, false, $context);
 
-        return \json_decode($verify);
+        return \json_decode($verify, true);
     }
 
     private function getUserIpAddr()
