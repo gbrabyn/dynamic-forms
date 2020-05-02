@@ -36,7 +36,7 @@ class ReCaptchaV2 extends FieldValidatorAbstract
      * @param string $secret
      * @param Error $error
      */
-    public function __construct($secret, Error $error=null, array $options=[])
+    public function __construct($secret, ?Error $error=null, array $options=[])
     {
         $this->secret = $secret;
         $this->error = $error;

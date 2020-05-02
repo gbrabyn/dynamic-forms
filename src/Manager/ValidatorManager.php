@@ -126,17 +126,6 @@ class ValidatorManager
     }
     
     /**
-     * 
-     * @param string $secret - the web-site secret key obtained from reCaptcha
-     * @param Error $error
-     * @return \GBrabyn\DynamicForms\FieldValidator\ReCaptchaV2
-     */
-    public function reCaptchaV2($secret, Error $error=null)
-    {
-        return new FieldValidator\ReCaptchaV2($secret, $error);
-    }
-    
-    /**
      * Used to compare numeric values of 2 fields. I.e. are they the same, different, is subject greater than, less than compareWith, etc.
      * It is expected that $subject and $compareWith fields will be validated for integer or float values before this CompareNumbers is called.
      * 
