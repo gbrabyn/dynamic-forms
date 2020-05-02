@@ -81,18 +81,27 @@ class ReCaptchaV2 extends FieldValidatorAbstract
      */
     private function getApiResponse($responseFromForm)
     {
-        $query = ['secret'=>$this->secret, 'response'=>$responseFromForm];
+        $data = ['secret'=>$this->secret, 'response'=>$responseFromForm];
 
         if($this->sendUsersIpAddress === true){
-            $query['remoteip'] = $this->getUserIpAddr();
+            $data['remoteip'] = $this->getUserIpAddr();
         }
+
+        $query = \http_build_query($data);
+
+        $header = array(
+            "Content-Type: application/x-www-form-urlencoded",
+            "Content-Length: ".\strlen($query)
+        );
 
         $options = [
                 'http' => [
                     'method' => 'POST',
-                    'content' => \http_build_query($query)
+                    'header' => \implode("\r\n", $header),
+                    'content' => \http_build_query($query),
                 ]
         ];
+
         $context  = \stream_context_create($options);
         $verify = \file_get_contents($this->apiUrl, false, $context);
 
