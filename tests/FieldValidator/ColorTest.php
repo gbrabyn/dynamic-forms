@@ -32,5 +32,8 @@ class ColorTest extends PHPUnit_Framework_TestCase
 
         $obj->setValue('#fe10991');
         $this->assertFalse($obj->isValid());
+
+        $obj->setValue('fe10991');
+        $this->assertFalse($obj->isValid());
     }
 }

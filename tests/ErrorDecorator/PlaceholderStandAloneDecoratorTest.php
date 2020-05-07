@@ -35,7 +35,7 @@ class PlaceholderStandAloneDecoratorTest extends PHPUnit_Framework_TestCase
 
         $decorator = new PlaceholderStandAloneDecorator('aaa${error}bbb${error}', $translator);
 
-        $decorator->setErrors([new Error('Custom Message!')]);
+        $decorator->setErrors([new Error('Custom Message!', 'customMessage')]);
 
         $expected = 'aaaTranslated Message!bbbTranslated Message!';
 

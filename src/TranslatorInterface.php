@@ -5,7 +5,7 @@ namespace GBrabyn\DynamicForms;
  *
  * @author GBrabyn
  */
-interface TranslatorInterface 
+interface TranslatorInterface
 {
     
     /**

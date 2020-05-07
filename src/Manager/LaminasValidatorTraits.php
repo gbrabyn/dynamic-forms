@@ -6,6 +6,8 @@ use GBrabyn\DynamicForms\GroupValidator;
 use GBrabyn\DynamicForms\Error;
 use GBrabyn\DynamicForms\Field;
 use Laminas\Validator;
+use Laminas\Validator\Translator\TranslatorInterface as LaminasTranslatorInterface;
+use Laminas\Validator\AbstractValidator;
 
 /**
  *
@@ -13,6 +15,22 @@ use Laminas\Validator;
  */
 trait LaminasValidatorTraits
 {
+    /** @var TranslatorInterface */
+    private $laminasTranslator;
+
+    public function setLaminasTranslator(LaminasTranslatorInterface $laminasTranslator)
+    {
+        $this->laminasTranslator = $laminasTranslator;
+        return $this;
+    }
+
+    private function addLaminasTranslator(AbstractValidator $validator)
+    {
+        if($this->laminasTranslator){
+            $validator->setTranslator($this->laminasTranslator);
+        }
+    }
+
     /**
      * 
      * @param int $min
@@ -26,6 +44,7 @@ trait LaminasValidatorTraits
         $validator = new Validator\StringLength($options);
         $validator->setMin($min);
         $validator->setMax($max);
+        $this->addLaminasTranslator($validator);
         
         return new LaminasValidatorWrapper($validator, $error);
     }
@@ -41,6 +60,7 @@ trait LaminasValidatorTraits
     {
         $validator = new Validator\Date($options);
         $validator->setFormat($format);
+        $this->addLaminasTranslator($validator);
         
         return new LaminasValidatorWrapper($validator, $error);
     }
@@ -59,6 +79,7 @@ trait LaminasValidatorTraits
     }
     
     /**
+     * Whether value lies between $min & $max
      * 
      * @param mixed $min - float, integer or string
      * @param mixed $max - float, integer or string
@@ -74,6 +95,7 @@ trait LaminasValidatorTraits
         $options['inclusive'] = (bool)$inclusive;
         
         $validator = new Validator\Between($options);
+        $this->addLaminasTranslator($validator);
         
         return new LaminasValidatorWrapper($validator, $error);
     }
@@ -89,6 +111,7 @@ trait LaminasValidatorTraits
     {
         $options = ['max'=>$max, 'inclusive'=>$inclusive];
         $validator = new Validator\LessThan($options);
+        $this->addLaminasTranslator($validator);
         
         return new LaminasValidatorWrapper($validator, $error);
     }
@@ -104,6 +127,7 @@ trait LaminasValidatorTraits
     {
         $options = ['min'=>$min, 'inclusive'=>$inclusive];
         $validator = new Validator\GreaterThan($options);
+        $this->addLaminasTranslator($validator);
         
         return new LaminasValidatorWrapper($validator, $error);
     }
@@ -117,6 +141,7 @@ trait LaminasValidatorTraits
     public function email(array $options=[], Error $error=null)
     {
         $validator = new Validator\EmailAddress($options);
+        $this->addLaminasTranslator($validator);
         
         return new LaminasValidatorWrapper($validator, $error);
     }
@@ -134,6 +159,7 @@ trait LaminasValidatorTraits
         }
 
         $validator = new Validator\Uri($options);
+        $this->addLaminasTranslator($validator);
         
         return new LaminasValidatorWrapper($validator, $error);
     }
@@ -147,6 +173,7 @@ trait LaminasValidatorTraits
     public function regex($pattern, Error $error=null)
     {
         $validator = new Validator\Regex($pattern);
+        $this->addLaminasTranslator($validator);
         
         return new LaminasValidatorWrapper($validator, $error);
     }
@@ -178,7 +205,7 @@ trait LaminasValidatorTraits
      */
     public function getCsrfTokenValidator(array $options=[])
     {
-        return new \Laminas\Validator\Csrf($options);
+        return new Validator\Csrf($options);
     }
     
 }

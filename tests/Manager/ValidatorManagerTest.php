@@ -32,6 +32,15 @@ class ValidatorManagerTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf(DynamicForms\FieldValidator\AllowedMultiple::class, $obj->allowedMultiple(['one'], $error));
     }
 
+    public function testArrayCount()
+    {
+        $obj = new ValidatorManager();
+        $this->assertInstanceOf(DynamicForms\FieldValidator\ArrayCount::class, $obj->arrayCount(3, 5));
+
+        $error = new Error('message', 'key');
+        $this->assertInstanceOf(DynamicForms\FieldValidator\ArrayCount::class, $obj->arrayCount(0, null, $error));
+    }
+
     public function testColor()
     {
         $obj = new ValidatorManager();

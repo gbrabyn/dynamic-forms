@@ -52,7 +52,7 @@ class LaminasValidatorWrapper extends FieldValidatorAbstract
         if($this->error){
             return $this->error;
         }
-        
+
         $messages = $this->validator->getMessages();
         $firstKey = key($messages);
 

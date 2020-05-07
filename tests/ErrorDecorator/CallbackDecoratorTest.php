@@ -52,7 +52,7 @@ class CallbackDecoratorTest extends PHPUnit_Framework_TestCase
     public function testTranslations()
     {
         $field = new Field();
-        $error = new Error('Invalid input');
+        $error = new Error('Invalid input', 'invalidInput');
         $escaper = new GBrabyn\DynamicForms\Element\LaminasEscaperWrapper( new Laminas\Escaper\Escaper('utf-8') );
         $element = new Input($escaper, 'number');
         $element->setAttributes(new GBrabyn\DynamicForms\Element\Attributes());

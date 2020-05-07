@@ -15,6 +15,7 @@
         "php": ">=7.1",
         "laminas/laminas-validator": "dev-master",
         "laminas/laminas-inputfilter": "~2.7",
+        "laminas/laminas-i18n-resources": "~2.6",
         "laminas/laminas-escaper": "~2.5",
         "laminas/laminas-math": "~3.0",
         "laminas/laminas-session": "~2.8"

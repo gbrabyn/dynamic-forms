@@ -16,6 +16,11 @@ class LaminasValidatorTraitsTest extends PHPUnit_Framework_TestCase
 
     public function testStringLength()
     {
+        $translator = $this ->getMockBuilder('GBrabyn\DynamicForms\TranslatorInterface')
+                            ->getMock();
+        $obj = $this->getMockTraits();
+        $obj->setLaminasTranslator(new DynamicForms\Manager\LaminasTranslatorWrapper($translator));
+
         $this->assertInstanceOf(LaminasValidatorWrapper::class, $this->getMockTraits()->stringLength(2, 4));
     }
     

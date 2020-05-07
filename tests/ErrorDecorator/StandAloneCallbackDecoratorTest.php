@@ -44,7 +44,7 @@ class StandAloneCallbackDecoratorTest extends PHPUnit_Framework_TestCase
             return 'aaa' . $errorMessages[0] . 'bbb'.$translator->translate('Appended sentence!');
         }, $translator);
 
-        $callbackDecorator->setErrors([new Error('Custom Message!')]);
+        $callbackDecorator->setErrors([new Error('Custom Message!', 'customKey')]);
 
         $expected = 'aaaTranslated Message!bbbTranslated Message!';
 

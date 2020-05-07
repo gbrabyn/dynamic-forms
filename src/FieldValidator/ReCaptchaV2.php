@@ -5,7 +5,7 @@ use \GBrabyn\DynamicForms\Error;
 use GBrabyn\DynamicForms\Exception\DynamicFormsException;
 
 /**
- * TODO - unit tests + test in live environment
+ * TODO - unit tests
  * Description of ReCaptchaV2
  *
  * @author GBrabyn
@@ -68,8 +68,8 @@ class ReCaptchaV2 extends FieldValidatorAbstract
     {
         $response = $this->getApiResponse($this->value);
 
-        if(! empty($response->error-codes)){
-            throw new DynamicFormsException('Error encountered in API response: '.print_r($response->error-codes, true));
+        if(! empty($response->{'error-codes'})){
+            throw new DynamicFormsException('Error encountered in API response: '.print_r($response->{'error-codes'}, true));
         }
         
         return ($response->success == true);

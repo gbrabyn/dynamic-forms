@@ -39,7 +39,7 @@ trait MessageTrait
         $message = $messages[$index];
 
         $ret = null;
-        if($this->hasTranslator()){
+        if($this->hasTranslator() && $message->getTranslationKey()){
             $ret = $this->translate($message->getTranslationKey());
         }
         

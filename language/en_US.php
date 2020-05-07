@@ -1,5 +1,9 @@
 <?php
-return array(
+use Laminas\I18n\Translator\Resources;
+
+$laminasValidatorTranslations = include(Resources::getBasePath().'en/Laminas_Validate.php');
+
+return array_merge($laminasValidatorTranslations, [
     'formErrors' => 'Please fix the errors in the form below.',
     'inputNotAllowed' => 'Not an approved value',
     'inputNotAllowedValues' => 'Contains a value not approved',
@@ -8,7 +12,7 @@ return array(
     'inputNotPositiveInteger' => 'Must be a positive integer',
     'inputNotNumber' => 'Must be a number',
     'inputDuplicated' => 'Duplicated',
-    'inputCsrfFail' => 'The form submitted did not originate from the expected site',
+    'inputCsrfFail' => 'Failed security checks! Possibly due to timeout. Try reloading this page and submitting the form again.',
     'inputReCaptchaFail' => 'Failed to prove you are human',
     'inputNotScalar' => 'Must be a string or number',
     'inputNotSequentialArray' => 'Not an array with sequential keys',
@@ -18,5 +22,4 @@ return array(
     'numItemsNotBetween' => 'Number of items must be between ${min} and ${max}',
     'numItemsLessThan' => 'Must be ${min} or more items',
     'numItemsGreaterThan' => 'Maximum of ${max} items',
-    
-);
+]);
