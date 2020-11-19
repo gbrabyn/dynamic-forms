@@ -1,11 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  * @author GBrabyn
  */
-class AllowedTest extends PHPUnit_Framework_TestCase  
+class AllowedTest extends TestCase  
 {
     public function testIsValid1()
     {

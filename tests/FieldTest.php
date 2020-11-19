@@ -1,11 +1,11 @@
 <?php
-
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  * @author GBrabyn
  */
-class FieldTest extends PHPUnit_Framework_TestCase 
+class FieldTest extends TestCase 
 {
     
     public function testIsThereAnySyntaxError()

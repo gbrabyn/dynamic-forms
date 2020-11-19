@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\Element\Options;
 
@@ -7,7 +8,7 @@ use GBrabyn\DynamicForms\Element\Options;
  *
  * @author GBrabyn
  */
-class CheckboxListTest extends PHPUnit_Framework_TestCase  
+class CheckboxListTest extends TestCase  
 {
 
     public function testGetWithoutErrorMessage()

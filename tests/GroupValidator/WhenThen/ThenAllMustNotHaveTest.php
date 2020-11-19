@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\GroupValidator\WhenThen\ThenAllMustNotHave;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\Error;
@@ -8,7 +9,7 @@ use GBrabyn\DynamicForms\Error;
  *
  * @author GBrabyn
  */
-class ThenAllMustNotHaveTest extends PHPUnit_Framework_TestCase 
+class ThenAllMustNotHaveTest extends TestCase 
 {
     public function testMeetConditions()
     {

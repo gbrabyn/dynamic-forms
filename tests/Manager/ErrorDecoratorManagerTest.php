@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Manager\ErrorDecoratorManager;
 
 /**
  *
  * @author GBrabyn
  */
-class ErrorDecoratorManagerTest extends PHPUnit_Framework_TestCase  
+class ErrorDecoratorManagerTest extends TestCase  
 {
     
     public function getTranslator()

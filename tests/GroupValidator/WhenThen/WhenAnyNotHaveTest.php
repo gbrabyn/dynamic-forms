@@ -1,4 +1,6 @@
 <?php
+
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\GroupValidator\WhenThen\WhenAnyNotHave;
 use GBrabyn\DynamicForms\Field;
 
@@ -6,7 +8,7 @@ use GBrabyn\DynamicForms\Field;
  *
  * @author GBrabyn
  */
-class WhenAnyNotHaveTest extends PHPUnit_Framework_TestCase 
+class WhenAnyNotHaveTest extends TestCase 
 {
     public function testConditionApplies()
     {

@@ -1,14 +1,12 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 12/17/18
- * Time: 5:09 PM
  */
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\ErrorDecorator\PlaceholderStandAloneDecorator;
 use GBrabyn\DynamicForms\Error;
 
-class PlaceholderStandAloneDecoratorTest extends PHPUnit_Framework_TestCase
+class PlaceholderStandAloneDecoratorTest extends TestCase
 {
     public function getTranslator()
     {

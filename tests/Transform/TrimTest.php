@@ -1,10 +1,11 @@
 <?php
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  * @author GBrabyn
  */
-class TrimTest extends PHPUnit_Framework_TestCase  
+class TrimTest extends TestCase  
 {
     public function testIsThereAnySyntaxError()
     {

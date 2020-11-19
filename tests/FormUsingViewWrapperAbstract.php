@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 12/31/18
- * Time: 8:26 AM
  */
 
 namespace GBrabyn\DynamicForms\tests;

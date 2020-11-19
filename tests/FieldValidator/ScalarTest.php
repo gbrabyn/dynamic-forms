@@ -1,11 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  * @author GBrabyn
  */
-class ScalarTest extends PHPUnit_Framework_TestCase  
+class ScalarTest extends TestCase  
 {
     public function testIsThereAnySyntaxError()
     {

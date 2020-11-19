@@ -1,11 +1,12 @@
 <?php
+use PHPUnit\Framework\TestCase;
 
 /**
  * Description of RemoveNumberLocalisationTest
  *
  * @author GBrabyn
  */
-class RemoveNumberLocalisationTest extends PHPUnit_Framework_TestCase  
+class RemoveNumberLocalisationTest extends TestCase  
 {
     public function testGetValue()
     {

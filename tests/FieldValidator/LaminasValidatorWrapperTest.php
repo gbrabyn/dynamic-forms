@@ -1,13 +1,13 @@
 <?php
 
-
+use PHPUnit\Framework\TestCase;
 
 /**
  * Description of LaminasValidatorWrapperTest
  *
  * @author GBrabyn
  */
-class LaminasValidatorWrapperTest extends PHPUnit_Framework_TestCase
+class LaminasValidatorWrapperTest extends TestCase
 {
     
     public function testIsValid()

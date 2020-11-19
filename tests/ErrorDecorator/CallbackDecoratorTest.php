@@ -1,16 +1,14 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: GBrabyn
- * Date: 11/2/18
- * Time: 2:21 PM
  */
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\ErrorDecorator\CallbackDecorator;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\Error;
 use GBrabyn\DynamicForms\Element\html5\Input;
 
-class CallbackDecoratorTest extends PHPUnit_Framework_TestCase
+class CallbackDecoratorTest extends TestCase
 {
     public function getTranslator()
     {

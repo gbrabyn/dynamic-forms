@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\GroupValidator\Unique;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\Error;
@@ -8,7 +9,7 @@ use GBrabyn\DynamicForms\Error;
  *
  * @author GBrabyn
  */
-class UniqueTest extends PHPUnit_Framework_TestCase 
+class UniqueTest extends TestCase 
 {
     public function testIsThereAnySyntaxError()
     {

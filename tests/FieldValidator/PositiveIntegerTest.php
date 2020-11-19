@@ -1,10 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
+
 /**
  *
  * @author GBrabyn
  */
-class PositiveIntegerTest extends PHPUnit_Framework_TestCase 
+class PositiveIntegerTest extends TestCase 
 {
     public function testIsValid()
     {

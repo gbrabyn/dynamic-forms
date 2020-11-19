@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Manager\ElementManagerAbstract;
 use GBrabyn\DynamicForms\Element\LaminasEscaperWrapper;
 use Laminas\Escaper\Escaper as LaminasEscaper;
@@ -9,7 +10,7 @@ use GBrabyn\DynamicForms\Element\Options;
  *
  * @author GBrabyn
  */
-class ElementManagerAbstractTest extends PHPUnit_Framework_TestCase 
+class ElementManagerAbstractTest extends TestCase 
 {
     public function getClass()
     {

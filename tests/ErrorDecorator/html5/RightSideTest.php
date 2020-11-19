@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\ErrorDecorator\html5\RightSide;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\Error;
@@ -10,7 +11,7 @@ use GBrabyn\DynamicForms\Exception\DynamicFormsException;
  *
  * @author GBrabyn
  */
-class RightSideTest extends PHPUnit_Framework_TestCase 
+class RightSideTest extends TestCase 
 {
     public function getTranslator()
     {

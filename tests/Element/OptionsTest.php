@@ -1,11 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  * @author GBrabyn
  */
-class OptionsTest extends PHPUnit_Framework_TestCase  
+class OptionsTest extends TestCase  
 {
     
     public function testAddAndPrepend()

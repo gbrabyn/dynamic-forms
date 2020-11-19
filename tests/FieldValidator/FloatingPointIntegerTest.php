@@ -4,7 +4,10 @@
  *
  * @author GBrabyn
  */
-class FloatingPointIntegerTest extends PHPUnit_Framework_TestCase 
+
+use PHPUnit\Framework\TestCase;
+
+class FloatingPointIntegerTest extends TestCase 
 {
     public function testIsValid()
     {

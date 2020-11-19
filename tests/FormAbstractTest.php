@@ -1,11 +1,12 @@
 <?php
+use PHPUnit\Framework\TestCase;
 
 /**
  * Description of FormAbstractTest
  *
  * @author GBrabyn
  */
-class FormAbstractTest extends PHPUnit_Framework_TestCase 
+class FormAbstractTest extends TestCase 
 {
     
     public function getClass()

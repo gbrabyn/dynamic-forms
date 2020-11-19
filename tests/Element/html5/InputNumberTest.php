@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Field;
 
 /**
  *
  * @author GBrabyn
  */
-class InputNumberTest extends PHPUnit_Framework_TestCase 
+class InputNumberTest extends TestCase 
 {
     
     public function testGetWithoutErrorMessage()

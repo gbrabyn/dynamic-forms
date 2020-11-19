@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Manager\LaminasTranslatorWrapper;
 
-class LaminasTranslatorWrapperTest extends PHPUnit_Framework_TestCase
+class LaminasTranslatorWrapperTest extends TestCase
 {
     public function getTranslator()
     {

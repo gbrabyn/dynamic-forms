@@ -1,4 +1,5 @@
 <?php
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms;
 use GBrabyn\DynamicForms\Manager\LaminasValidatorTraits;
 use GBrabyn\DynamicForms\FieldValidator\LaminasValidatorWrapper;
@@ -7,7 +8,7 @@ use GBrabyn\DynamicForms\FieldValidator\LaminasValidatorWrapper;
  *
  * @author GBrabyn
  */
-class LaminasValidatorTraitsTest extends PHPUnit_Framework_TestCase
+class LaminasValidatorTraitsTest extends TestCase
 {
     protected function getMockTraits()
     {

@@ -1,17 +1,15 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 12/17/18
- * Time: 5:23 PM
  */
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Manager\ElementManager;
 use GBrabyn\DynamicForms\Element\LaminasEscaperWrapper;
 use Laminas\Escaper\Escaper as LaminasEscaper;
 use GBrabyn\DynamicForms\Element\Options;
 
-class ElementManagerTest extends PHPUnit_Framework_TestCase
+class ElementManagerTest extends TestCase
 {
 
 

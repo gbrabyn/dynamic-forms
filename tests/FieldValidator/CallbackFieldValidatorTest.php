@@ -1,12 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 9/14/18
- * Time: 12:39 PM
  */
 
-class CallbackFieldValidatorTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class CallbackFieldValidatorTest extends TestCase
 {
     public function testIsValid()
     {

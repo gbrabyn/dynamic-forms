@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Element\Attributes;
 use GBrabyn\DynamicForms\Element\html5\DataList;
 use GBrabyn\DynamicForms\Element\Options;
 use GBrabyn\DynamicForms\Element\LaminasEscaperWrapper;
 use Laminas\Escaper\Escaper;
 
-class DataListTest extends PHPUnit_Framework_TestCase
+class DataListTest extends TestCase
 {
     public function testGetWithoutErrorMessage()
     {

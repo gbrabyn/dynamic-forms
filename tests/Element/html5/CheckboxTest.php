@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Field;
 
 /**
  *
  * @author GBrabyn
  */
-class CheckboxTest extends PHPUnit_Framework_TestCase 
+class CheckboxTest extends TestCase 
 {
     
     public function testGetWithoutErrorMessage()

@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Field;
 
 /**
  *
  * @author GBrabyn
  */
-class RadioTest extends PHPUnit_Framework_TestCase 
+class RadioTest extends TestCase 
 {
     
     public function testGetWithoutErrorMessage()

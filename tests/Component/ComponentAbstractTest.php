@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\tests\FormUsingViewWrapperAbstract;
 
-class ComponentAbstractTest extends PHPUnit_Framework_TestCase
+class ComponentAbstractTest extends TestCase
 {
     public function getForm()
     {

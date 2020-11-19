@@ -1,12 +1,12 @@
 <?php
-
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Manager\TransformManager;
 
 /**
  *
  * @author GBrabyn
  */
-class TransformManagerTest extends PHPUnit_Framework_TestCase  
+class TransformManagerTest extends TestCase  
 {
 
     public function testEmptyStringToNull()

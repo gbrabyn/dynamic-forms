@@ -1,11 +1,11 @@
 <?php
-// GBrabyn@w0wq:/var/www/DynamicForms$ vendor/bin/phpunit
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  * @author GBrabyn
  */
-class MessageTest extends PHPUnit_Framework_TestCase
+class MessageTest extends TestCase
 {
 	
     /**

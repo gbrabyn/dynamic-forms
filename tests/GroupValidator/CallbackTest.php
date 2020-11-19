@@ -1,13 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 9/14/18
- * Time: 11:54 AM
  */
 
+use PHPUnit\Framework\TestCase;
 
-class CallbackTest extends PHPUnit_Framework_TestCase
+class CallbackTest extends TestCase
 {
     public function testIsValid()
     {

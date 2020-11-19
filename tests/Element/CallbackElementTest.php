@@ -2,13 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: GBrabyn
- * Date: 11/2/18
- * Time: 3:52 PM
  */
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms;
 use GBrabyn\DynamicForms\Field;
 
-class CallbackElementTest extends PHPUnit_Framework_TestCase
+class CallbackElementTest extends TestCase
 {
     public function testGetWithoutErrorMessage()
     {

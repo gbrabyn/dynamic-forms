@@ -1,10 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
+
 /**
  *
  * @author GBrabyn
  */
-class AnonymousFunctionGroupValidatorTest extends PHPUnit_Framework_TestCase 
+class AnonymousFunctionGroupValidatorTest extends TestCase 
 {
     public function testIsValid()
     {

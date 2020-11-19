@@ -1,10 +1,11 @@
 <?php
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  * @author GBrabyn
  */
-class EmptyMakeNullTest extends PHPUnit_Framework_TestCase  
+class EmptyMakeNullTest extends TestCase  
 {
     public function testGetValue()
     {

@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Field;
 
 /**
  *
  * @author GBrabyn
  */
-class InputTest extends PHPUnit_Framework_TestCase 
+class InputTest extends TestCase 
 {
     public function testIsThereAnySyntaxError()
     {

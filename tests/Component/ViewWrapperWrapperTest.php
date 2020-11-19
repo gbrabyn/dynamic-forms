@@ -1,6 +1,7 @@
 <?php
 require_once realpath(__DIR__.'/../FormUsingViewWrapperAbstract.php');
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Element\LaminasEscaperWrapper;
 use GBrabyn\DynamicForms\Manager\ElementManager;
 use GBrabyn\DynamicForms\Manager\ErrorDecoratorManager;
@@ -8,7 +9,7 @@ use GBrabyn\DynamicForms\tests\FormUsingViewWrapperAbstract;
 use Laminas\Escaper\Escaper as LaminasEscaper;
 use GBrabyn\DynamicForms\Component\ViewWrapperWrapper;
 
-class ViewWrapperWrapperTest extends PHPUnit_Framework_TestCase
+class ViewWrapperWrapperTest extends TestCase
 {
     private function getForm()
     {

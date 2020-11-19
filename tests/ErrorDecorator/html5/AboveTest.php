@@ -2,15 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: GBrabyn
- * Date: 9/17/18
- * Time: 4:35 PM
  */
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\ErrorDecorator\html5\Above;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\Error;
 use GBrabyn\DynamicForms\Element\html5\Input;
 
-class AboveTest extends PHPUnit_Framework_TestCase
+class AboveTest extends TestCase
 {
     public function getTranslator()
     {

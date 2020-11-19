@@ -1,12 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 9/14/18
- * Time: 2:50 PM
  */
 
-class CopyErrorsTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class CopyErrorsTest extends TestCase
 {
     public function testTransferErrors()
     {

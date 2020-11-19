@@ -1,12 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 11/30/18
- * Time: 11:57 AM
  */
 
-class EnsureArrayTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class EnsureArrayTest extends TestCase
 {
     public function testGetValue()
     {

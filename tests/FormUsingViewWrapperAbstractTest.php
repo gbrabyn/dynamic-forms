@@ -1,12 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 12/17/18
- * Time: 5:42 PM
  */
 
-class FormUsingViewWrapperAbstractTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class FormUsingViewWrapperAbstractTest extends TestCase
 {
     public function getClass()
     {

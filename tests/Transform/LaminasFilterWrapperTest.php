@@ -1,11 +1,12 @@
 <?php
+use PHPUnit\Framework\TestCase;
 
 /**
  * Description of LaminasFilterWrapperTest
  *
  * @author GBrabyn
  */
-class LaminasFilterWrapperTest extends PHPUnit_Framework_TestCase
+class LaminasFilterWrapperTest extends TestCase
 {
     
     public function testGetValue()

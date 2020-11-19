@@ -1,5 +1,5 @@
 <?php
-
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms;
 use GBrabyn\DynamicForms\Manager\ValidatorManager;
 use GBrabyn\DynamicForms\Error;
@@ -9,7 +9,7 @@ use GBrabyn\DynamicForms\Field;
  *
  * @author GBrabyn
  */
-class ValidatorManagerTest extends PHPUnit_Framework_TestCase 
+class ValidatorManagerTest extends TestCase 
 {
 
     public function testAllowed()

@@ -1,16 +1,14 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 12/17/18
- * Time: 4:23 PM
  */
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\ErrorDecorator\PlaceholderFieldDecorator;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\Error;
 use GBrabyn\DynamicForms\Element\html5\Input;
 
-class PlaceholderFieldDecoratorTest extends PHPUnit_Framework_TestCase
+class PlaceholderFieldDecoratorTest extends TestCase
 {
     public function getTranslator()
     {

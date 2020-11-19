@@ -1,12 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 11/2/18
- * Time: 5:29 PM
  */
 
-class SequentialArrayTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class SequentialArrayTest extends TestCase
 {
     public function testIsValid()
     {

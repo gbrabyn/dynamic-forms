@@ -1,10 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
+
 /**
  *
  * @author GBrabyn
  */
-class AnonymousFunctionTransformTest extends PHPUnit_Framework_TestCase  
+class AnonymousFunctionTransformTest extends TestCase  
 {
     
     public function testGetValue()

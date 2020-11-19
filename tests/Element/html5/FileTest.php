@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Field;
 
 /**
  *
  * @author GBrabyn
  */
-class FileTest extends PHPUnit_Framework_TestCase 
+class FileTest extends TestCase 
 {
     
     public function testGetWithoutErrorMessage()

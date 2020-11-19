@@ -1,13 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 12/27/18
- * Time: 4:03 PM
  */
 
 require_once realpath(__DIR__.'/../FormUsingViewWrapperAbstract.php');
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Manager\ElementManager;
 use GBrabyn\DynamicForms\Manager\ErrorDecoratorManager;
 use GBrabyn\DynamicForms\Element\LaminasEscaperWrapper;
@@ -16,7 +14,7 @@ use GBrabyn\DynamicForms\Exception\DynamicFormsException;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\tests\FormUsingViewWrapperAbstract;
 
-class Html5ViewWrapperTest extends PHPUnit_Framework_TestCase
+class Html5ViewWrapperTest extends TestCase
 {
     private $form;
 

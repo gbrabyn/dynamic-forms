@@ -1,10 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
+
 /**
  *
  * @author GBrabyn
  */
-class ErrorAbstractTest extends PHPUnit_Framework_TestCase 
+class ErrorAbstractTest extends TestCase 
 {
     public function getClass()
     {

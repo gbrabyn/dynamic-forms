@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\Field;
 
 /**
  *
  * @author GBrabyn
  */
-class HiddenTest extends PHPUnit_Framework_TestCase 
+class HiddenTest extends TestCase 
 {
     
     public function testIsThereAnySyntaxError()

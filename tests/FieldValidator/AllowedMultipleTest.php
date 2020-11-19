@@ -1,11 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  * @author GBrabyn
  */
-class AllowedMultipleTest extends PHPUnit_Framework_TestCase 
+class AllowedMultipleTest extends TestCase 
 {
     public function testIsValid()
     {

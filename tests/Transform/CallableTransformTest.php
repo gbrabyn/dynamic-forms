@@ -1,12 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 9/14/18
- * Time: 2:20 PM
  */
 
-class CallableTransformTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class CallableTransformTest extends TestCase
 {
     public function testGetValue()
     {

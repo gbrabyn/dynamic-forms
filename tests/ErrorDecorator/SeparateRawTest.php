@@ -1,18 +1,15 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 9/17/18
- * Time: 10:49 AM
  */
-
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\ErrorDecorator\SeparateRaw;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\Error;
 use GBrabyn\DynamicForms\Element\html5\Input;
 use GBrabyn\DynamicForms\Exception\DynamicFormsException;
 
-class SeparateRawTest extends PHPUnit_Framework_TestCase
+class SeparateRawTest extends TestCase
 {
     public function getTranslator()
     {

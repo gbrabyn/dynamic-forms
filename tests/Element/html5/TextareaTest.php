@@ -1,11 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  * @author GBrabyn
  */
-class TextareaTest extends PHPUnit_Framework_TestCase 
+class TextareaTest extends TestCase 
 {
     public function testTextarea()
     {

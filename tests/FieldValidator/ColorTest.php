@@ -1,12 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
  * User: GBrabyn
- * Date: 11/7/18
- * Time: 5:37 PM
  */
 
-class ColorTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class ColorTest extends TestCase
 {
     public function testIsValid()
     {

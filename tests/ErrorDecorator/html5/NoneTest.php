@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use GBrabyn\DynamicForms\ErrorDecorator\html5\None;
 use GBrabyn\DynamicForms\Field;
 use GBrabyn\DynamicForms\Error;
@@ -11,7 +12,7 @@ use GBrabyn\DynamicForms\Exception\DynamicFormsException;
  *
  * @author GBrabyn
  */
-class NoneTest extends PHPUnit_Framework_TestCase
+class NoneTest extends TestCase
 {
     
     public function testToString()
